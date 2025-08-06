@@ -3,7 +3,6 @@ Exercise 1:
 😊 é ñ — ✓ ⛔
 
 Try rendering the page **with and without** this tag:
-```html
 <meta charset="UTF-8">
 
 2. Base Tag for Links
