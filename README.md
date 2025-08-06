@@ -30,7 +30,7 @@ Add large text and test zoom/responsiveness with and without this tag.
 Meta Author and Keywords
 Goal: Add basic metadata used for document identification.
 
-Exercise 5:
+Exercise 4:
 <meta name="author" content="Aamna Khan">
 <meta name="keywords" content="HTML, meta, charset, base, SEO, beginner practice">
 Open DevTools → inspect to verify the values.
