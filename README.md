@@ -1,6 +1,5 @@
 
 Exercise 1:
-<!-- Create a page with a title and paragraph that includes: -->
 😊 é ñ — ✓ ⛔
 
 Try rendering the page **with and without** this tag:
