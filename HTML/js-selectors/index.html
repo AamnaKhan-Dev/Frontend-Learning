@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Selector Practice</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: lightgray;
+      margin: 5px;
+      display: inline-block;
+      text-align: center;
+      line-height: 100px;
+    }
+    .highlight {
+      background: yellow;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="highlightFirst()">Highlight First</button>
+  <button onclick="highlightFifth()">Highlight Fifth</button>
+  <button onclick="highlightAll()">Highlight All</button>
+  <button onclick="clearHighlights()">Clear</button>
+  <button onclick="deleteSixth()">Delete6th</button>
+
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+  <div class="box">9</div>
+  <div class="box">10</div>
+
+  <script>
+    function deleteSixth() {
+        document.querySelectorAll(".box")[5].remove()
+    }
+    function clearHighlights() {
+      document.querySelectorAll(".box").forEach(b => b.classList.remove("highlight"));
+    }
+
+    function highlightFirst() {
+      clearHighlights();
+      document.getElementsByClassName("box")[0].classList.add("highlight");
+    }
+
+    function highlightFifth() {
+      clearHighlights();
+      document.querySelectorAll(".box")[4].classList.add("highlight");
+    }
+
+    function highlightAll() {
+      clearHighlights();
+      let allBoxes = document.getElementsByClassName("box");
+      for (let i = 0; i < allBoxes.length; i++) {
+      allBoxes[i].classList.add("highlight");}}
+  </script>
+</body>
+</html>
