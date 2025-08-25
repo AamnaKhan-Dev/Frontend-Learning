@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box & Display Models</title>
+  <style>
+    .block {
+      display: block;
+      background: lightcoral;
+      padding: 10px;
+      margin: 5px;
+      border: 2px solid red;
+    }
+
+    .inline {
+      display: inline;
+      background: lightblue;
+      padding: 10px; /* works left/right, but not top/bottom */
+      margin: 5px;   /* same: top/bottom ignored */
+      border: 2px solid blue;
+      width: 100px; /* won't work*/
+      height: 50px; /* won't work*/
+    }
+
+    .inline-block {
+      display: inline-block;
+      background: lightgreen;
+      padding: 10px;
+      margin: 5px;
+      border: 2px solid green;
+      width: 100px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Block Elements</h2>
+  <div class="block">Block 1</div>
+  <div class="block">Block 2</div>
+
+  <h2>Inline Elements</h2>
+  <span class="inline">Inline 1</span>
+  <span class="inline">Inline 2</span>
+
+  <h2>Inline-Block Elements</h2>
+  <span class="inline-block">Inline-Block 1</span>
+  <span class="inline-block">Inline-Block 2</span>
+</body>
+</html>
