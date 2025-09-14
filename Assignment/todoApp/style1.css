@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #ffc5cb;
+    /* background: #242526; */
+    align-items: center; 
+    padding: 10px;
+
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background-color: #ffecd0;
+    border-radius: 10px;
+    margin: 50px auto 20px;
+    padding: 40px 30px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* x-offset y-offset blur-radius spread-radius color */
+}
+
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1; /*it will take full width*/
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 40px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #fb4b37; /* Darker button color on hover */
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: ''; 
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(./images/unchecked.png);
+    background-position: center;
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: ;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    width: 32px;
+    height: 32px;
+    background-image: url(./images/vchecked.png);
+    background-position: center;
+    background-size: cover;
+    left: 7px;
+    top: 10px;
+}
+
+ul li span img {
+    width: 24px; /* Adjust the width of the dustbin icon */
+    height: 24px; /* Adjust the height of the dustbin icon */
+}
+
+.toggle{
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+}
+.toggle button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ff5945;
+    color: #edeef0;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    padding: 8px;
+    margin-right: 20px;
+    margin-bottom: 70px;
+    transition: font-size 0.3s;
+    line-height: 18px;
+}
+.toggle button:hover {
+    background-color: #fb4b37; /* Darker button color on hover */
+    font-size: 18px;
+}
+
+
+.social {
+    position: fixed;
+    top: 50%;
+    /* Adjust top positioning */
+    left: 20px;
+    /* Adjust left positioning */
+    transform: translateY(-50%);
+    z-index: 1;
+    place-items: center;
+    overflow: hidden;
+}
+
+.social a {
+    display: block;
+    margin-bottom: 18px;
+    width: 50px;
+    height: 50px;
+    background-color: #908A94ff;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    /* Use flexbox to center icon vertically and horizontally */
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    color: white;
+
+    filter: invert(100%);
+
+}
+.social img:hover{
+    transition: 0.2s;
+    transform: scale(1.13);
+}
+.social a:hover {
+    background-color: #615C62ff;
+    transition: 0.5s;
+}
+#task-count {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fae098;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px auto 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
+}
